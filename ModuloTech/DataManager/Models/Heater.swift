@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Heater {
+struct Heater: Device {
     var id: Int
     var deviceName: String
     var mode: String

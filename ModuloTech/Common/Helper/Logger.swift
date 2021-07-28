@@ -13,7 +13,7 @@ let log = SwiftyBeaver.self
 
 class Logger {
 
-    class func setupLog() {
+    class func setUpLog() {
         let console = ConsoleDestination()  // log to Xcode Console
         let file = FileDestination()  // log to default swiftybeaver.log file
         console.format = "$DHH:mm:ss$d $L $M"

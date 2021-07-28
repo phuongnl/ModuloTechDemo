@@ -9,7 +9,7 @@
 import UIKit
 
 class DeviceCell: UITableViewCell {
-
+    
     @IBOutlet weak var labelDeviceName: UILabel!
     @IBOutlet weak var labelProductType: UILabel!
     
@@ -17,24 +17,14 @@ class DeviceCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
-    func config(item: Light) {
-        self.labelDeviceName.text = item.deviceName
-        self.labelProductType.text = item.productType
-    }
-    
-    func config(item: RollerShutter) {
-        self.labelDeviceName.text = item.deviceName
-        self.labelProductType.text = item.productType
-    }
-    
-    func config(item: Heater) {
+    func config(item: Device) {
         self.labelDeviceName.text = item.deviceName
         self.labelProductType.text = item.productType
     }

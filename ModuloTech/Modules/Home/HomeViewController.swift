@@ -23,37 +23,41 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.title = viewModel.title
         
+        self.setupProfile()
+        self.setUpTableView()
+    }
+    
+    func setupProfile() {
+        let profileButton = UIBarButtonItem(image: Asset.profile.image, style: .plain, target: self.viewModel, action: #selector(self.viewModel.showProfile))
+        self.navigationItem.rightBarButtonItem = profileButton
+    }
+    
+    func setUpTableView() {
         self.tableView.register(DeviceCell.self)
         self.tableView.hideEmptyCells()
         
         self.viewModel.devices
             .bind(to: tableView.rx.items) { tableview, row, item -> DeviceCell in
                 let cell: DeviceCell = tableview.dequeueReusableCell(forIndexPath: IndexPath(row: row, section: 0))
-                if let item = item as? Light {
-                    cell.config(item: item)
-                } else if let item = item as? RollerShutter {
-                    cell.config(item: item)
-                } else if let item = item as? Heater {
+                if let item = item as? Device {
                     cell.config(item: item)
                 }
                 return cell
         }.disposed(by: disposeBag)
         
-        self.tableView.rx.modelSelected(Light.self)
-            .subscribe(onNext: { [weak self] lampe in
-                
-            })
-            .disposed(by: disposeBag)
-        self.tableView.rx.modelSelected(RollerShutter.self)
-            .subscribe(onNext: { [weak self] voletRoulant in
-                
-            })
-            .disposed(by: disposeBag)
-        self.tableView.rx.modelSelected(Heater.self)
-            .subscribe(onNext: { [weak self] radiateur in
-                
-            })
-            .disposed(by: disposeBag)
+        self.tableView.rx.modelSelected(Any.self)
+            .subscribe(onNext: { [weak self] device in
+                switch device {
+                case is Light:
+                    self?.viewModel.didTapLight.onNext(())
+                case is RollerShutter:
+                    self?.viewModel.didTapRollerShutter.onNext(())
+                case is Heater:
+                    self?.viewModel.didTapHeater.onNext(())
+                default:
+                    break
+                }
+            }).disposed(by: disposeBag)
     }
     
 }

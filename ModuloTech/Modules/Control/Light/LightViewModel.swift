@@ -7,7 +7,11 @@
 //
 
 import UIKit
+import RxSwift
 
-class LightViewModel: NSObject {
-
+class LightViewModel {
+    
+    private let disposeBag = DisposeBag()
+    let light: PublishSubject<Light> = PublishSubject()
+    
 }

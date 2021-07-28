@@ -8,6 +8,6 @@
 
 import UIKit
 
-class RollerShutterViewModel: NSObject {
+class RollerShutterViewModel {
 
 }

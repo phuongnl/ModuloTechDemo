@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct Light {
+
+
+struct Light: Device {
     var id: Int
     var deviceName: String
     var intensity: Int

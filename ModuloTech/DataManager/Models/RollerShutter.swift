@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RollerShutter {
+struct RollerShutter: Device {
     var id: Int
     var deviceName: String
     var position: Int

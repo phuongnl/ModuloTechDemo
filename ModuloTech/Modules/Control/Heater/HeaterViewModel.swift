@@ -8,6 +8,6 @@
 
 import UIKit
 
-class HeaterViewModel: NSObject {
+class HeaterViewModel {
 
 }
