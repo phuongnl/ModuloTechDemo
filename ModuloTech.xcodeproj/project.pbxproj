@@ -3,18 +3,58 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7F075F5A26AFE4D600768CAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075F5926AFE4D600768CAC /* AppDelegate.swift */; };
-		7F075F5C26AFE4D600768CAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075F5B26AFE4D600768CAC /* SceneDelegate.swift */; };
-		7F075F5E26AFE4D600768CAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075F5D26AFE4D600768CAC /* ViewController.swift */; };
-		7F075F6126AFE4D600768CAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F075F5F26AFE4D600768CAC /* Main.storyboard */; };
 		7F075F6326AFE4D900768CAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F075F6226AFE4D900768CAC /* Assets.xcassets */; };
 		7F075F6626AFE4D900768CAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F075F6426AFE4D900768CAC /* LaunchScreen.storyboard */; };
 		7F075F7126AFE4D900768CAC /* ModuloTechTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075F7026AFE4D900768CAC /* ModuloTechTests.swift */; };
 		7F075F7C26AFE4DA00768CAC /* ModuloTechUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075F7B26AFE4DA00768CAC /* ModuloTechUITests.swift */; };
+		7F075F8B26AFE59300768CAC /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 7F075F8A26AFE59300768CAC /* SwiftyJSON */; };
+		7F075F8E26AFE84E00768CAC /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 7F075F8D26AFE84E00768CAC /* SwiftyBeaver */; };
+		7F075FA626AFE91B00768CAC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075FA126AFE91A00768CAC /* User.swift */; };
+		7F075FA926AFE9AF00768CAC /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075FA726AFE9AF00768CAC /* L10n.swift */; };
+		7F075FAA26AFE9AF00768CAC /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075FA826AFE9AF00768CAC /* Assets.swift */; };
+		7F075FB226AFEA7900768CAC /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F075FAD26AFEA7900768CAC /* RxSwift.framework */; };
+		7F075FB326AFEA7900768CAC /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7F075FAD26AFEA7900768CAC /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F075FB826AFEA7900768CAC /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F075FB026AFEA7900768CAC /* RxCocoa.framework */; };
+		7F075FB926AFEA7900768CAC /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7F075FB026AFEA7900768CAC /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F075FBA26AFEA7900768CAC /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F075FB126AFEA7900768CAC /* RxRelay.framework */; };
+		7F075FBB26AFEA7900768CAC /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7F075FB126AFEA7900768CAC /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F075FC626AFF0C000768CAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F075FC826AFF0C000768CAC /* Localizable.strings */; };
+		7F075FD126AFF43000768CAC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075FCF26AFF43000768CAC /* HomeViewController.swift */; };
+		7F075FD226AFF43000768CAC /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F075FD026AFF43000768CAC /* HomeViewController.xib */; };
+		7F075FD426AFF47D00768CAC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075FD326AFF47D00768CAC /* HomeViewModel.swift */; };
+		7F075FD626AFF49400768CAC /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075FD526AFF49400768CAC /* HomeCoordinator.swift */; };
+		7F075FE026AFF57900768CAC /* TableViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075FDF26AFF57900768CAC /* TableViewExt.swift */; };
+		7F075FE226AFF58700768CAC /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075FE126AFF58600768CAC /* ViewExt.swift */; };
+		7F075FE526AFF5AC00768CAC /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075FE326AFF5AC00768CAC /* DeviceCell.swift */; };
+		7F075FE626AFF5AC00768CAC /* DeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F075FE426AFF5AC00768CAC /* DeviceCell.xib */; };
+		7F075FE826AFF7F500768CAC /* Lampe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075FE726AFF7F500768CAC /* Lampe.swift */; };
+		7F075FEA26AFF86200768CAC /* ViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075FE926AFF86200768CAC /* ViewControllerExt.swift */; };
+		7F075FEC26AFFACA00768CAC /* VoletRoulant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075FEB26AFFACA00768CAC /* VoletRoulant.swift */; };
+		7F075FEE26AFFAE100768CAC /* Radiateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075FED26AFFAE100768CAC /* Radiateur.swift */; };
+		7F075FFF26B01BE500768CAC /* LampeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F075FFE26B01BE500768CAC /* LampeViewModel.swift */; };
+		7F07600126B01BF300768CAC /* LampeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F07600026B01BF300768CAC /* LampeCoordinator.swift */; };
+		7F07600426B01C0900768CAC /* LampeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F07600226B01C0900768CAC /* LampeViewController.swift */; };
+		7F07600526B01C0900768CAC /* LampeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F07600326B01C0900768CAC /* LampeViewController.xib */; };
+		7F07600826B01C1700768CAC /* VoletRoulantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F07600626B01C1700768CAC /* VoletRoulantViewController.swift */; };
+		7F07600926B01C1700768CAC /* VoletRoulantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F07600726B01C1700768CAC /* VoletRoulantViewController.xib */; };
+		7F07600B26B01C2300768CAC /* VoletRoulantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F07600A26B01C2300768CAC /* VoletRoulantViewModel.swift */; };
+		7F07600D26B01C2F00768CAC /* VoletRoulantCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F07600C26B01C2F00768CAC /* VoletRoulantCoordinator.swift */; };
+		7F07600F26B01C5E00768CAC /* RadiateurViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F07600E26B01C5E00768CAC /* RadiateurViewModel.swift */; };
+		7F07601126B01C7100768CAC /* RadiateurCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F07601026B01C7100768CAC /* RadiateurCoordinator.swift */; };
+		7F07601426B01C7E00768CAC /* RadiateurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F07601226B01C7E00768CAC /* RadiateurViewController.swift */; };
+		7F07601526B01C7E00768CAC /* RadiateurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F07601326B01C7E00768CAC /* RadiateurViewController.xib */; };
+		7F07601826B01CBE00768CAC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F07601626B01CBE00768CAC /* ProfileViewController.swift */; };
+		7F07601926B01CBE00768CAC /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F07601726B01CBE00768CAC /* ProfileViewController.xib */; };
+		7F07601B26B01CCA00768CAC /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F07601A26B01CCA00768CAC /* ProfileViewModel.swift */; };
+		7F07601D26B01CD400768CAC /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F07601C26B01CD400768CAC /* ProfileCoordinator.swift */; };
+		7F07602326B01F7800768CAC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 7F07602226B01F7800768CAC /* Swinject */; };
+		7F07602626B01FA300768CAC /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 7F07602526B01FA300768CAC /* SwinjectAutoregistration */; };
+		7F07602826B01FD700768CAC /* ModuloRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F07602726B01FD700768CAC /* ModuloRemoteDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +74,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7F075FBC26AFEA7900768CAC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7F075FB926AFEA7900768CAC /* RxCocoa.framework in Embed Frameworks */,
+				7F075FB326AFEA7900768CAC /* RxSwift.framework in Embed Frameworks */,
+				7F075FBB26AFEA7900768CAC /* RxRelay.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7F075F5626AFE4D600768CAC /* ModuloTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModuloTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F075F5926AFE4D600768CAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7F075F5B26AFE4D600768CAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7F075F5D26AFE4D600768CAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7F075F6026AFE4D600768CAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F075F6226AFE4D900768CAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F075F6526AFE4D900768CAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F075F6726AFE4D900768CAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +102,44 @@
 		7F075F7726AFE4DA00768CAC /* ModuloTechUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModuloTechUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F075F7B26AFE4DA00768CAC /* ModuloTechUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuloTechUITests.swift; sourceTree = "<group>"; };
 		7F075F7D26AFE4DA00768CAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F075FA126AFE91A00768CAC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7F075FA726AFE9AF00768CAC /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
+		7F075FA826AFE9AF00768CAC /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		7F075FAD26AFEA7900768CAC /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		7F075FAE26AFEA7900768CAC /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		7F075FAF26AFEA7900768CAC /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		7F075FB026AFEA7900768CAC /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		7F075FB126AFEA7900768CAC /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		7F075FC726AFF0C000768CAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7F075FCF26AFF43000768CAC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7F075FD026AFF43000768CAC /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		7F075FD326AFF47D00768CAC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7F075FD526AFF49400768CAC /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		7F075FDF26AFF57900768CAC /* TableViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExt.swift; sourceTree = "<group>"; };
+		7F075FE126AFF58600768CAC /* ViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
+		7F075FE326AFF5AC00768CAC /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
+		7F075FE426AFF5AC00768CAC /* DeviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
+		7F075FE726AFF7F500768CAC /* Lampe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lampe.swift; sourceTree = "<group>"; };
+		7F075FE926AFF86200768CAC /* ViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExt.swift; sourceTree = "<group>"; };
+		7F075FEB26AFFACA00768CAC /* VoletRoulant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoletRoulant.swift; sourceTree = "<group>"; };
+		7F075FED26AFFAE100768CAC /* Radiateur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radiateur.swift; sourceTree = "<group>"; };
+		7F075FFE26B01BE500768CAC /* LampeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampeViewModel.swift; sourceTree = "<group>"; };
+		7F07600026B01BF300768CAC /* LampeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampeCoordinator.swift; sourceTree = "<group>"; };
+		7F07600226B01C0900768CAC /* LampeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampeViewController.swift; sourceTree = "<group>"; };
+		7F07600326B01C0900768CAC /* LampeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LampeViewController.xib; sourceTree = "<group>"; };
+		7F07600626B01C1700768CAC /* VoletRoulantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoletRoulantViewController.swift; sourceTree = "<group>"; };
+		7F07600726B01C1700768CAC /* VoletRoulantViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoletRoulantViewController.xib; sourceTree = "<group>"; };
+		7F07600A26B01C2300768CAC /* VoletRoulantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoletRoulantViewModel.swift; sourceTree = "<group>"; };
+		7F07600C26B01C2F00768CAC /* VoletRoulantCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoletRoulantCoordinator.swift; sourceTree = "<group>"; };
+		7F07600E26B01C5E00768CAC /* RadiateurViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiateurViewModel.swift; sourceTree = "<group>"; };
+		7F07601026B01C7100768CAC /* RadiateurCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiateurCoordinator.swift; sourceTree = "<group>"; };
+		7F07601226B01C7E00768CAC /* RadiateurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiateurViewController.swift; sourceTree = "<group>"; };
+		7F07601326B01C7E00768CAC /* RadiateurViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RadiateurViewController.xib; sourceTree = "<group>"; };
+		7F07601626B01CBE00768CAC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		7F07601726B01CBE00768CAC /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		7F07601A26B01CCA00768CAC /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		7F07601C26B01CD400768CAC /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		7F07602726B01FD700768CAC /* ModuloRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuloRemoteDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +147,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F07602626B01FA300768CAC /* SwinjectAutoregistration in Frameworks */,
+				7F075FB826AFEA7900768CAC /* RxCocoa.framework in Frameworks */,
+				7F075F8B26AFE59300768CAC /* SwiftyJSON in Frameworks */,
+				7F07602326B01F7800768CAC /* Swinject in Frameworks */,
+				7F075F8E26AFE84E00768CAC /* SwiftyBeaver in Frameworks */,
+				7F075FBA26AFEA7900768CAC /* RxRelay.framework in Frameworks */,
+				7F075FB226AFEA7900768CAC /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +181,7 @@
 				7F075F6F26AFE4D900768CAC /* ModuloTechTests */,
 				7F075F7A26AFE4DA00768CAC /* ModuloTechUITests */,
 				7F075F5726AFE4D600768CAC /* Products */,
+				7F075FAC26AFEA7900768CAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,12 +199,12 @@
 			isa = PBXGroup;
 			children = (
 				7F075F5926AFE4D600768CAC /* AppDelegate.swift */,
-				7F075F5B26AFE4D600768CAC /* SceneDelegate.swift */,
-				7F075F5D26AFE4D600768CAC /* ViewController.swift */,
-				7F075F5F26AFE4D600768CAC /* Main.storyboard */,
-				7F075F6226AFE4D900768CAC /* Assets.xcassets */,
-				7F075F6426AFE4D900768CAC /* LaunchScreen.storyboard */,
-				7F075F6726AFE4D900768CAC /* Info.plist */,
+				7F075F9526AFE91800768CAC /* Common */,
+				7F075F9A26AFE91A00768CAC /* DataManager */,
+				7F075F9026AFE91700768CAC /* Modules */,
+				7F075F8F26AFE91600768CAC /* Resources */,
+				7F075F9926AFE91900768CAC /* Supporting Files */,
+				7F075FA226AFE91B00768CAC /* Vendors */,
 			);
 			path = ModuloTech;
 			sourceTree = "<group>";
@@ -128,6 +227,192 @@
 			path = ModuloTechUITests;
 			sourceTree = "<group>";
 		};
+		7F075F8F26AFE91600768CAC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7F075F6226AFE4D900768CAC /* Assets.xcassets */,
+				7F075F6426AFE4D900768CAC /* LaunchScreen.storyboard */,
+				7F075FC826AFF0C000768CAC /* Localizable.strings */,
+				7F075FA826AFE9AF00768CAC /* Assets.swift */,
+				7F075FA726AFE9AF00768CAC /* L10n.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7F075F9026AFE91700768CAC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				7F075FCD26AFF3E200768CAC /* Home */,
+				7F075FCE26AFF3E600768CAC /* Control */,
+				7F075FFD26B01BCC00768CAC /* Profile */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7F075F9526AFE91800768CAC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7F075F9626AFE91800768CAC /* UI */,
+				7F075F9726AFE91800768CAC /* Extension */,
+				7F075F9826AFE91800768CAC /* Helper */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7F075F9626AFE91800768CAC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7F075F9726AFE91800768CAC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7F075FE926AFF86200768CAC /* ViewControllerExt.swift */,
+				7F075FDF26AFF57900768CAC /* TableViewExt.swift */,
+				7F075FE126AFF58600768CAC /* ViewExt.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		7F075F9826AFE91800768CAC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		7F075F9926AFE91900768CAC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F075F6726AFE4D900768CAC /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F075F9A26AFE91A00768CAC /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				7F075F9B26AFE91A00768CAC /* Source */,
+				7F075FA126AFE91A00768CAC /* User.swift */,
+				7F075FE726AFF7F500768CAC /* Lampe.swift */,
+				7F075FEB26AFFACA00768CAC /* VoletRoulant.swift */,
+				7F075FED26AFFAE100768CAC /* Radiateur.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		7F075F9B26AFE91A00768CAC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				7F075F9D26AFE91A00768CAC /* Local */,
+				7F075F9F26AFE91A00768CAC /* Remote */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		7F075F9D26AFE91A00768CAC /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		7F075F9F26AFE91A00768CAC /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				7F07602726B01FD700768CAC /* ModuloRemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		7F075FA226AFE91B00768CAC /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		7F075FAC26AFEA7900768CAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F075FAF26AFEA7900768CAC /* RxBlocking.framework */,
+				7F075FB026AFEA7900768CAC /* RxCocoa.framework */,
+				7F075FB126AFEA7900768CAC /* RxRelay.framework */,
+				7F075FAD26AFEA7900768CAC /* RxSwift.framework */,
+				7F075FAE26AFEA7900768CAC /* RxTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F075FCD26AFF3E200768CAC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7F075FD026AFF43000768CAC /* HomeViewController.xib */,
+				7F075FCF26AFF43000768CAC /* HomeViewController.swift */,
+				7F075FD326AFF47D00768CAC /* HomeViewModel.swift */,
+				7F075FD526AFF49400768CAC /* HomeCoordinator.swift */,
+				7F075FE326AFF5AC00768CAC /* DeviceCell.swift */,
+				7F075FE426AFF5AC00768CAC /* DeviceCell.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7F075FCE26AFF3E600768CAC /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				7F075FFC26B01B9600768CAC /* Lampe */,
+				7F075FFB26B01B8C00768CAC /* VoletRoulant */,
+				7F075FFA26B01B7900768CAC /* Radiateur */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		7F075FFA26B01B7900768CAC /* Radiateur */ = {
+			isa = PBXGroup;
+			children = (
+				7F07601326B01C7E00768CAC /* RadiateurViewController.xib */,
+				7F07601226B01C7E00768CAC /* RadiateurViewController.swift */,
+				7F07600E26B01C5E00768CAC /* RadiateurViewModel.swift */,
+				7F07601026B01C7100768CAC /* RadiateurCoordinator.swift */,
+			);
+			path = Radiateur;
+			sourceTree = "<group>";
+		};
+		7F075FFB26B01B8C00768CAC /* VoletRoulant */ = {
+			isa = PBXGroup;
+			children = (
+				7F07600726B01C1700768CAC /* VoletRoulantViewController.xib */,
+				7F07600626B01C1700768CAC /* VoletRoulantViewController.swift */,
+				7F07600A26B01C2300768CAC /* VoletRoulantViewModel.swift */,
+				7F07600C26B01C2F00768CAC /* VoletRoulantCoordinator.swift */,
+			);
+			path = VoletRoulant;
+			sourceTree = "<group>";
+		};
+		7F075FFC26B01B9600768CAC /* Lampe */ = {
+			isa = PBXGroup;
+			children = (
+				7F07600326B01C0900768CAC /* LampeViewController.xib */,
+				7F07600226B01C0900768CAC /* LampeViewController.swift */,
+				7F075FFE26B01BE500768CAC /* LampeViewModel.swift */,
+				7F07600026B01BF300768CAC /* LampeCoordinator.swift */,
+			);
+			path = Lampe;
+			sourceTree = "<group>";
+		};
+		7F075FFD26B01BCC00768CAC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				7F07601726B01CBE00768CAC /* ProfileViewController.xib */,
+				7F07601626B01CBE00768CAC /* ProfileViewController.swift */,
+				7F07601A26B01CCA00768CAC /* ProfileViewModel.swift */,
+				7F07601C26B01CD400768CAC /* ProfileCoordinator.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,12 +423,20 @@
 				7F075F5226AFE4D600768CAC /* Sources */,
 				7F075F5326AFE4D600768CAC /* Frameworks */,
 				7F075F5426AFE4D600768CAC /* Resources */,
+				7F075FBC26AFEA7900768CAC /* Embed Frameworks */,
+				7F075FC226AFEF6000768CAC /* SwiftGen */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ModuloTech;
+			packageProductDependencies = (
+				7F075F8A26AFE59300768CAC /* SwiftyJSON */,
+				7F075F8D26AFE84E00768CAC /* SwiftyBeaver */,
+				7F07602226B01F7800768CAC /* Swinject */,
+				7F07602526B01FA300768CAC /* SwinjectAutoregistration */,
+			);
 			productName = ModuloTech;
 			productReference = 7F075F5626AFE4D600768CAC /* ModuloTech.app */;
 			productType = "com.apple.product-type.application";
@@ -216,6 +509,12 @@
 				Base,
 			);
 			mainGroup = 7F075F4D26AFE4D500768CAC;
+			packageReferences = (
+				7F075F8926AFE59300768CAC /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				7F075F8C26AFE84E00768CAC /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
+				7F07602126B01F7800768CAC /* XCRemoteSwiftPackageReference "Swinject" */,
+				7F07602426B01FA300768CAC /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+			);
 			productRefGroup = 7F075F5726AFE4D600768CAC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,9 +531,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F07601926B01CBE00768CAC /* ProfileViewController.xib in Resources */,
 				7F075F6626AFE4D900768CAC /* LaunchScreen.storyboard in Resources */,
+				7F07601526B01C7E00768CAC /* RadiateurViewController.xib in Resources */,
+				7F07600526B01C0900768CAC /* LampeViewController.xib in Resources */,
+				7F075FC626AFF0C000768CAC /* Localizable.strings in Resources */,
 				7F075F6326AFE4D900768CAC /* Assets.xcassets in Resources */,
-				7F075F6126AFE4D600768CAC /* Main.storyboard in Resources */,
+				7F07600926B01C1700768CAC /* VoletRoulantViewController.xib in Resources */,
+				7F075FD226AFF43000768CAC /* HomeViewController.xib in Resources */,
+				7F075FE626AFF5AC00768CAC /* DeviceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,14 +559,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7F075FC226AFEF6000768CAC /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftgen config run\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7F075F5226AFE4D600768CAC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F075F5E26AFE4D600768CAC /* ViewController.swift in Sources */,
+				7F07600126B01BF300768CAC /* LampeCoordinator.swift in Sources */,
+				7F075FFF26B01BE500768CAC /* LampeViewModel.swift in Sources */,
+				7F07600826B01C1700768CAC /* VoletRoulantViewController.swift in Sources */,
+				7F07601426B01C7E00768CAC /* RadiateurViewController.swift in Sources */,
+				7F075FE526AFF5AC00768CAC /* DeviceCell.swift in Sources */,
+				7F075FA926AFE9AF00768CAC /* L10n.swift in Sources */,
+				7F07601B26B01CCA00768CAC /* ProfileViewModel.swift in Sources */,
+				7F07601826B01CBE00768CAC /* ProfileViewController.swift in Sources */,
+				7F07601D26B01CD400768CAC /* ProfileCoordinator.swift in Sources */,
 				7F075F5A26AFE4D600768CAC /* AppDelegate.swift in Sources */,
-				7F075F5C26AFE4D600768CAC /* SceneDelegate.swift in Sources */,
+				7F075FEC26AFFACA00768CAC /* VoletRoulant.swift in Sources */,
+				7F07601126B01C7100768CAC /* RadiateurCoordinator.swift in Sources */,
+				7F075FEE26AFFAE100768CAC /* Radiateur.swift in Sources */,
+				7F07602826B01FD700768CAC /* ModuloRemoteDataSource.swift in Sources */,
+				7F075FE026AFF57900768CAC /* TableViewExt.swift in Sources */,
+				7F07600426B01C0900768CAC /* LampeViewController.swift in Sources */,
+				7F07600D26B01C2F00768CAC /* VoletRoulantCoordinator.swift in Sources */,
+				7F07600F26B01C5E00768CAC /* RadiateurViewModel.swift in Sources */,
+				7F075FEA26AFF86200768CAC /* ViewControllerExt.swift in Sources */,
+				7F075FD426AFF47D00768CAC /* HomeViewModel.swift in Sources */,
+				7F07600B26B01C2300768CAC /* VoletRoulantViewModel.swift in Sources */,
+				7F075FD626AFF49400768CAC /* HomeCoordinator.swift in Sources */,
+				7F075FD126AFF43000768CAC /* HomeViewController.swift in Sources */,
+				7F075FA626AFE91B00768CAC /* User.swift in Sources */,
+				7F075FE226AFF58700768CAC /* ViewExt.swift in Sources */,
+				7F075FE826AFF7F500768CAC /* Lampe.swift in Sources */,
+				7F075FAA26AFE9AF00768CAC /* Assets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,20 +647,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7F075F5F26AFE4D600768CAC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7F075F6026AFE4D600768CAC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7F075F6426AFE4D900768CAC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7F075F6526AFE4D900768CAC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7F075FC826AFF0C000768CAC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F075FC726AFF0C000768CAC /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -366,7 +716,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +770,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -435,7 +785,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ModuloTech/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "ModuloTech/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -443,7 +797,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucas.ModuloTech;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -452,7 +806,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ModuloTech/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "ModuloTech/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,7 +818,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucas.ModuloTech;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -584,6 +942,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7F075F8926AFE59300768CAC /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		7F075F8C26AFE84E00768CAC /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.5;
+			};
+		};
+		7F07602126B01F7800768CAC /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
+		7F07602426B01FA300768CAC /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7F075F8A26AFE59300768CAC /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F075F8926AFE59300768CAC /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		7F075F8D26AFE84E00768CAC /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F075F8C26AFE84E00768CAC /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
+		7F07602226B01F7800768CAC /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F07602126B01F7800768CAC /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		7F07602526B01FA300768CAC /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F07602426B01FA300768CAC /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7F075F4E26AFE4D500768CAC /* Project object */;
 }
