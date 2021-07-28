@@ -16,8 +16,10 @@ class HomeViewModel {
     
     let title = L10n.home
     let isLoading = BehaviorSubject(value: true)
+    
     let user: PublishSubject<User> = PublishSubject()
     let devices = BehaviorSubject(value: [Any]())
+    
     let didTapLight = PublishSubject<Void>()
     let didTapRollerShutter = PublishSubject<Void>()
     let didTapHeater = PublishSubject<Void>()

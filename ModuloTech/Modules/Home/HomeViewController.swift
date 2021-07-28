@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     var viewModel: HomeViewModel!
     private let disposeBag = DisposeBag()
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -25,6 +26,39 @@ class HomeViewController: UIViewController {
         
         self.setupProfile()
         self.setUpTableView()
+        self.setupSearchBar()
+    }
+    
+    func setupSearchBar() {
+        let searchResults = self.searchBar.rx.text
+            .orEmpty
+            .throttle(.microseconds(300), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .flatMapLatest { [weak self] query -> Observable<[Any]> in
+                guard let self = self else { return .just([]) }
+                if query.isEmpty {
+                    return self.viewModel.devices
+                }
+                // Can't use filter
+                var filteredDevices = [Any]()
+                self.viewModel.devices
+                    .subscribe(onNext: { devices in
+                        for case let item as Device in devices {
+                            if item.productType.lowercased().contains(query.lowercased()) {
+                                filteredDevices.append(item)
+                            }
+                        }
+                    }).disposed(by: self.disposeBag)
+                return .just(filteredDevices)
+        }.observe(on: MainScheduler.instance)
+        
+        searchResults.bind(to: tableView.rx.items) { tableview, row, item -> DeviceCell in
+                let cell: DeviceCell = tableview.dequeueReusableCell(forIndexPath: IndexPath(row: row, section: 0))
+                if let item = item as? Device {
+                    cell.config(item: item)
+                }
+                return cell
+        }.disposed(by: disposeBag)
     }
     
     func setupProfile() {
@@ -69,4 +103,3 @@ extension HomeViewController: UITableViewDelegate {
     }
     
 }
-
