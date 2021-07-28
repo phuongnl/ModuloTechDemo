@@ -1,5 +1,5 @@
 //
-//  LampeViewController.swift
+//  LightViewController.swift
 //  ModuloTech
 //
 //  Created by Lucas Lee on 27/07/2021.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LampeViewController: UIViewController {
+class LightViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

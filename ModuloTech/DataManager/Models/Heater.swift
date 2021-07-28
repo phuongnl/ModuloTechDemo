@@ -8,16 +8,12 @@
 
 import Foundation
 
-struct Radiateur {
-    
+struct Heater {
     var id: Int
     var deviceName: String
     var mode: String
     var temperature: Int
     var productType: String
-
 }
 
-extension Radiateur: Codable {
-    
-}
+extension Heater: Codable {}

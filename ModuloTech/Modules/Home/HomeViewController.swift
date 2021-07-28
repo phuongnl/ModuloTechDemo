@@ -12,43 +12,48 @@ import RxCocoa
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    var viewModel: HomeViewModel!
     private let disposeBag = DisposeBag()
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-
+        self.title = viewModel.title
+        
         self.tableView.register(DeviceCell.self)
-        self.tableView.rx.modelSelected(Lampe.self)
+        self.tableView.hideEmptyCells()
+        
+        self.viewModel.devices
+            .bind(to: tableView.rx.items) { tableview, row, item -> DeviceCell in
+                let cell: DeviceCell = tableview.dequeueReusableCell(forIndexPath: IndexPath(row: row, section: 0))
+                if let item = item as? Light {
+                    cell.config(item: item)
+                } else if let item = item as? RollerShutter {
+                    cell.config(item: item)
+                } else if let item = item as? Heater {
+                    cell.config(item: item)
+                }
+                return cell
+        }.disposed(by: disposeBag)
+        
+        self.tableView.rx.modelSelected(Light.self)
             .subscribe(onNext: { [weak self] lampe in
                 
             })
             .disposed(by: disposeBag)
-        self.tableView.rx.modelSelected(VoletRoulant.self)
+        self.tableView.rx.modelSelected(RollerShutter.self)
             .subscribe(onNext: { [weak self] voletRoulant in
                 
             })
             .disposed(by: disposeBag)
-        self.tableView.rx.modelSelected(Radiateur.self)
+        self.tableView.rx.modelSelected(Heater.self)
             .subscribe(onNext: { [weak self] radiateur in
                 
             })
             .disposed(by: disposeBag)
-    }
-    
-}
-
-extension HomeViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: DeviceCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-        return cell
     }
     
 }

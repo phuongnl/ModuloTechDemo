@@ -1,5 +1,5 @@
 //
-//  LampeViewModel.swift
+//  HeaterCoordinator.swift
 //  ModuloTech
 //
 //  Created by Lucas Lee on 27/07/2021.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class LampeViewModel: NSObject {
+class HeaterCoordinator: NSObject {
 
 }

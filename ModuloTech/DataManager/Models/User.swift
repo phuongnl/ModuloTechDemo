@@ -16,18 +16,13 @@ struct Address {
     var country: String
 }
 
-extension Address: Codable {
-    
-}
+extension Address: Codable {}
 
 struct User {
-    
     var firstName: String
     var lastName: String
     var address: Address
     var birthDate: TimeInterval
 }
 
-extension User: Codable {
-    
-}
+extension User: Codable {}

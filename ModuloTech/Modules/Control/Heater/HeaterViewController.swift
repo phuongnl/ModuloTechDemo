@@ -1,5 +1,5 @@
 //
-//  RadiateurViewController.swift
+//  HeaterViewController.swift
 //  ModuloTech
 //
 //  Created by Lucas Lee on 27/07/2021.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RadiateurViewController: UIViewController {
+class HeaterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

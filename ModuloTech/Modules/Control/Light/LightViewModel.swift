@@ -1,5 +1,5 @@
 //
-//  VoletRoulantViewModel.swift
+//  LightViewModel.swift
 //  ModuloTech
 //
 //  Created by Lucas Lee on 27/07/2021.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class VoletRoulantViewModel: NSObject {
+class LightViewModel: NSObject {
 
 }

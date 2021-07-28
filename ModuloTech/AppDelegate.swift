@@ -13,15 +13,16 @@ import Swinject
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    private var appCoordinator: AppCoordinator!
+    static let container = Container()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
-        let homeViewController = HomeViewController.loadFromNib()
+        AppDelegate.container.registerDependencies()
+        Logger.setupLog()
         
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = homeViewController
-        self.window?.makeKeyAndVisible()
+        appCoordinator = AppDelegate.container.resolve(AppCoordinator.self)!
+        appCoordinator.start()
         return true
     }
     

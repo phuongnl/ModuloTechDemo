@@ -1,5 +1,5 @@
 //
-//  Lampe.swift
+//  Light.swift
 //  ModuloTech
 //
 //  Created by Lucas Lee on 27/07/2021.
@@ -8,16 +8,12 @@
 
 import Foundation
 
-struct Lampe {
-    
+struct Light {
     var id: Int
     var deviceName: String
     var intensity: Int
     var mode: String
     var productType: String
-    
 }
 
-extension Lampe: Codable {
-    
-}
+extension Light: Codable {}

@@ -1,5 +1,5 @@
 //
-//  VoletRoulant.swift
+//  RollerShutter.swift
 //  ModuloTech
 //
 //  Created by Lucas Lee on 27/07/2021.
@@ -8,15 +8,11 @@
 
 import Foundation
 
-struct VoletRoulant {
-
+struct RollerShutter {
     var id: Int
     var deviceName: String
     var position: Int
     var productType: String
-    
 }
 
-extension VoletRoulant: Codable {
-    
-}
+extension RollerShutter: Codable {}

@@ -1,5 +1,5 @@
 //
-//  VoletRoulantViewController.swift
+//  RollerShutterViewController.swift
 //  ModuloTech
 //
 //  Created by Lucas Lee on 27/07/2021.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VoletRoulantViewController: UIViewController {
+class RollerShutterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -10,6 +10,9 @@ import UIKit
 
 class DeviceCell: UITableViewCell {
 
+    @IBOutlet weak var labelDeviceName: UILabel!
+    @IBOutlet weak var labelProductType: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +22,21 @@ class DeviceCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func config(item: Light) {
+        self.labelDeviceName.text = item.deviceName
+        self.labelProductType.text = item.productType
+    }
+    
+    func config(item: RollerShutter) {
+        self.labelDeviceName.text = item.deviceName
+        self.labelProductType.text = item.productType
+    }
+    
+    func config(item: Heater) {
+        self.labelDeviceName.text = item.deviceName
+        self.labelProductType.text = item.productType
     }
     
 }
