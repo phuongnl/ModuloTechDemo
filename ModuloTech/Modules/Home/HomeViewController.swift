@@ -53,11 +53,11 @@ class HomeViewController: UIViewController {
         }.observe(on: MainScheduler.instance)
         
         searchResults.bind(to: tableView.rx.items) { tableview, row, item -> DeviceCell in
-                let cell: DeviceCell = tableview.dequeueReusableCell(forIndexPath: IndexPath(row: row, section: 0))
-                if let item = item as? Device {
-                    cell.config(item: item)
-                }
-                return cell
+            let cell: DeviceCell = tableview.dequeueReusableCell(forIndexPath: IndexPath(row: row, section: 0))
+            if let item = item as? Device {
+                cell.config(item: item)
+            }
+            return cell
         }.disposed(by: disposeBag)
     }
     
@@ -90,6 +90,17 @@ class HomeViewController: UIViewController {
                     self?.viewModel.didTapHeater.onNext(())
                 default:
                     break
+                }
+            }).disposed(by: disposeBag)
+        
+        self.tableView.rx.itemDeleted
+            .subscribe(onNext: { indexPath in
+                do {
+                    var tempDevices = try self.viewModel.devices.value()
+                    tempDevices.remove(at: indexPath.row)
+                    self.viewModel.devices.onNext(tempDevices)
+                }    catch {
+                    log.error(error)
                 }
             }).disposed(by: disposeBag)
     }
