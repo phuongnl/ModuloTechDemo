@@ -83,11 +83,14 @@ class HomeViewController: UIViewController {
             .subscribe(onNext: { [weak self] device in
                 switch device {
                 case is Light:
-                    self?.viewModel.didTapLight.onNext(())
+                    guard let device = device as? Light else { return }
+                    self?.viewModel.didTapLight.onNext((device))
                 case is RollerShutter:
-                    self?.viewModel.didTapRollerShutter.onNext(())
+                    guard let device = device as? RollerShutter else { return }
+                    self?.viewModel.didTapRollerShutter.onNext((device))
                 case is Heater:
-                    self?.viewModel.didTapHeater.onNext(())
+                    guard let device = device as? Heater else { return }
+                    self?.viewModel.didTapHeater.onNext((device))
                 default:
                     break
                 }
@@ -99,7 +102,7 @@ class HomeViewController: UIViewController {
                     var tempDevices = try self.viewModel.devices.value()
                     tempDevices.remove(at: indexPath.row)
                     self.viewModel.devices.onNext(tempDevices)
-                }    catch {
+                } catch {
                     log.error(error)
                 }
             }).disposed(by: disposeBag)

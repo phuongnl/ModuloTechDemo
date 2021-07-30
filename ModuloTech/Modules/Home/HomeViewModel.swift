@@ -20,9 +20,9 @@ class HomeViewModel {
     let user: PublishSubject<User> = PublishSubject()
     let devices = BehaviorSubject(value: [Any]())
     
-    let didTapLight = PublishSubject<Void>()
-    let didTapRollerShutter = PublishSubject<Void>()
-    let didTapHeater = PublishSubject<Void>()
+    let didTapLight = PublishSubject<Light>()
+    let didTapRollerShutter = PublishSubject<RollerShutter>()
+    let didTapHeater = PublishSubject<Heater>()
     
     init(remoteDataSource: ModuloRemoteDataSource) {
         self.remoteDataSource = remoteDataSource

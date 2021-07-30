@@ -52,6 +52,7 @@
 		7F07602326B01F7800768CAC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 7F07602226B01F7800768CAC /* Swinject */; };
 		7F07602626B01FA300768CAC /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 7F07602526B01FA300768CAC /* SwinjectAutoregistration */; };
 		7F07602826B01FD700768CAC /* ModuloRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F07602726B01FD700768CAC /* ModuloRemoteDataSource.swift */; };
+		7F7731F826B3F25A00EC9358 /* DeviceMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7731F726B3F25A00EC9358 /* DeviceMode.swift */; };
 		7FC70CE426B10D0D00F6A44C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC70CE326B10D0D00F6A44C /* Logger.swift */; };
 		7FC70CE726B112B400F6A44C /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC70CE626B112B400F6A44C /* BaseCoordinator.swift */; };
 		7FC70CEA26B1156300F6A44C /* Container+RegisterDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC70CE926B1156300F6A44C /* Container+RegisterDependencies.swift */; };
@@ -143,6 +144,7 @@
 		7F07601A26B01CCA00768CAC /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		7F07601C26B01CD400768CAC /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		7F07602726B01FD700768CAC /* ModuloRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuloRemoteDataSource.swift; sourceTree = "<group>"; };
+		7F7731F726B3F25A00EC9358 /* DeviceMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMode.swift; sourceTree = "<group>"; };
 		7FC70CE326B10D0D00F6A44C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		7FC70CE626B112B400F6A44C /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		7FC70CE926B1156300F6A44C /* Container+RegisterDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+RegisterDependencies.swift"; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				7F075FA126AFE91A00768CAC /* User.swift */,
+				7F7731F726B3F25A00EC9358 /* DeviceMode.swift */,
 				7FCBA38126B1674600C547C7 /* DeviceProtocol.swift */,
 				7F075FE726AFF7F500768CAC /* Light.swift */,
 				7F075FEB26AFFACA00768CAC /* RollerShutter.swift */,
@@ -467,6 +470,7 @@
 				7F075F5426AFE4D600768CAC /* Resources */,
 				7F075FBC26AFEA7900768CAC /* Embed Frameworks */,
 				7F075FC226AFEF6000768CAC /* SwiftGen */,
+				7FE668F126B39D1B001E1E30 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -620,6 +624,24 @@
 			shellPath = /bin/sh;
 			shellScript = "swiftgen config run\n";
 		};
+		7FE668F126B39D1B001E1E30 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -649,6 +671,7 @@
 				7F07600426B01C0900768CAC /* LightViewController.swift in Sources */,
 				7F07600F26B01C5E00768CAC /* HeaterViewModel.swift in Sources */,
 				7FCBA38026B1423A00C547C7 /* DeviceType.swift in Sources */,
+				7F7731F826B3F25A00EC9358 /* DeviceMode.swift in Sources */,
 				7FCBA38226B1674600C547C7 /* DeviceProtocol.swift in Sources */,
 				7F075FEA26AFF86200768CAC /* ViewControllerExt.swift in Sources */,
 				7F075FD426AFF47D00768CAC /* HomeViewModel.swift in Sources */,

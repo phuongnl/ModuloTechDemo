@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaterViewController" customModule="ModuloTech" customModuleProvider="target">
             <connections>
+                <outlet property="labelValue" destination="RE0-bq-j8i" id="Jtp-8E-Cuw"/>
+                <outlet property="slider" destination="0oN-sY-lu7" id="bsK-ea-Ull"/>
+                <outlet property="switchHeater" destination="ppX-Im-0o2" id="jGW-UU-f2O"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,7 +20,36 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="7" minValue="7" maxValue="28" translatesAutoresizingMaskIntoConstraints="NO" id="0oN-sY-lu7">
+                    <rect key="frame" x="55" y="344" width="304" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="MqQ-MX-YpE"/>
+                    </constraints>
+                </slider>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ppX-Im-0o2">
+                    <rect key="frame" x="182.5" y="474" width="51" height="31"/>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RE0-bq-j8i">
+                    <rect key="frame" x="107" y="434" width="200" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="dE7-4B-zUF"/>
+                        <constraint firstAttribute="height" constant="20" id="jWs-X9-yze"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="ppX-Im-0o2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8sA-f1-zZj"/>
+                <constraint firstItem="0oN-sY-lu7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="A3q-2h-NQl"/>
+                <constraint firstItem="ppX-Im-0o2" firstAttribute="top" secondItem="0oN-sY-lu7" secondAttribute="bottom" constant="100" id="MOP-YL-3Dm"/>
+                <constraint firstItem="ppX-Im-0o2" firstAttribute="top" secondItem="RE0-bq-j8i" secondAttribute="bottom" constant="20" id="RX8-av-QlD"/>
+                <constraint firstItem="0oN-sY-lu7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="300" id="vw1-Kl-vb9"/>
+                <constraint firstItem="RE0-bq-j8i" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wy9-Dh-ikm"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="96"/>
         </view>

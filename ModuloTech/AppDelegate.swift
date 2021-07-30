@@ -12,7 +12,6 @@ import Swinject
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var window: UIWindow?
     private var appCoordinator: AppCoordinator!
     static let container = Container()
 
@@ -27,4 +26,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
 }
-

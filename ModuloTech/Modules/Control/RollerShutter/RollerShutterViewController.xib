@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RollerShutterViewController" customModule="ModuloTech" customModuleProvider="target">
             <connections>
+                <outlet property="labelValue" destination="lNK-QS-BDw" id="H1d-w9-fDI"/>
+                <outlet property="slider" destination="zso-55-QVd" id="iyv-nN-tze"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,7 +19,31 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zso-55-QVd">
+                    <rect key="frame" x="55" y="433" width="304" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="b1T-2z-Bql"/>
+                    </constraints>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNK-QS-BDw">
+                    <rect key="frame" x="107" y="493" width="200" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="1Uk-NF-zoa"/>
+                        <constraint firstAttribute="height" constant="20" id="xNG-yU-JTc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="zso-55-QVd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="eIf-TR-oYW"/>
+                <constraint firstItem="lNK-QS-BDw" firstAttribute="top" secondItem="zso-55-QVd" secondAttribute="bottom" constant="30" id="kba-2c-wTO"/>
+                <constraint firstItem="lNK-QS-BDw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tpz-Fr-ccP"/>
+                <constraint firstItem="zso-55-QVd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xQ0-YA-wkh"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="96"/>
         </view>

@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 struct Light: Device {
     var id: Int
     var deviceName: String

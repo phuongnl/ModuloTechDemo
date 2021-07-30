@@ -9,6 +9,7 @@
 import Foundation
 
 protocol Device {
+    var id: Int { get set }
     var deviceName: String { get set }
     var productType: String { get set }
 }
