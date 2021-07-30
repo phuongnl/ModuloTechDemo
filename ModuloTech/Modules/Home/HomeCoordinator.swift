@@ -44,26 +44,18 @@ class HomeCoordinator: BaseCoordinator {
         self.homeViewModel.didTapHeater
             .subscribe(onNext: { [weak self] heater in self?.didTapHeater(heater) })
             .disposed(by: disposeBag)
+        
+        self.homeViewModel.didTapProfile
+            .subscribe(onNext: { [weak self] in self?.showProfile()})
+            .disposed(by: disposeBag)
     }
     
     private func didTapLight(_ light: Light) {
         let lightViewController = LightViewController.loadFromNib()
         lightViewController.viewModel = self.lightViewModel
         lightViewController.viewModel.light
-            .subscribe(onNext: { light in
-//                self.homeViewModel.devices
-//                    .subscribe(onNext: { [weak self] devices in
-//                        var newDevices = devices
-//                        for (index, item) in newDevices.enumerated() {
-//                            if let item = item as? Device, item.id == light?.id {
-//                                newDevices[index] = light
-//                            }
-//                        }
-//                        self?.homeViewModel.devices.onNext(newDevices)
-//                        log.verbose(newDevices)
-//                    }).disposed(by: self.disposeBag)
-                log.verbose("leu leu: \(String(describing: light))")
-
+            .subscribe(onNext: { _ in
+//                log.verbose("didTapLight: \(String(describing: light))")
             }).disposed(by: disposeBag)
         lightViewController.viewModel.light.accept(light)
         navigationController.pushViewController(lightViewController, animated: true)
@@ -81,10 +73,18 @@ class HomeCoordinator: BaseCoordinator {
         heaterViewController.viewModel = self.heaterViewModel
         heaterViewController.viewModel.heater.accept(heater)
         heaterViewController.viewModel.heater
-            .subscribe(onNext: { heater in
-                log.verbose("leu leu: \(String(describing: heater))")
+            .subscribe(onNext: { _ in
+//                log.verbose("didTapHeater: \(String(describing: heater))")
             }).disposed(by: disposeBag)
         navigationController.pushViewController(heaterViewController, animated: true)
+    }
+    
+    private func showProfile() {
+        guard let user = self.homeViewModel.user.value else { return }
+        AppDelegate.container.register(User.self) { _ in user }
+        let coordinator = AppDelegate.container.resolve(ProfileCoordinator.self)!
+        coordinator.navigationController = navigationController
+        start(coordinator: coordinator)
     }
     
 }

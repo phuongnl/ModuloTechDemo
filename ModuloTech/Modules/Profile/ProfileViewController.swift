@@ -15,41 +15,49 @@ class ProfileViewController: UIViewController {
     var viewModel: ProfileViewModel!
     private let disposeBag = DisposeBag()
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textFieldFirstName: UITextField!
+    @IBOutlet weak var textieldLastName: UITextField!
+    @IBOutlet weak var textFieldCity: UITextField!
+    @IBOutlet weak var textFieldPostalCode: UITextField!
+    @IBOutlet weak var textFieldStreet: UITextField!
+    @IBOutlet weak var textFieldStreetCode: UITextField!
+    @IBOutlet weak var textFieldCountry: UITextField!
+    @IBOutlet weak var textFieldBirthDate: UITextField!
+    @IBOutlet weak var buttonSave: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         self.title = viewModel.title
-        self.setUpTableView()
-    }
-    
-    func setUpTableView() {
-        self.tableView.register(ProfileCell.self)
-        self.tableView.hideEmptyCells()
-    }
-    
-}
-
-extension ProfileViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: ProfileCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
         
-        return cell
+        self.viewModel.user.subscribe(onNext: { [weak self] user in
+            guard let user = user, let self = self else { return }
+            self.textFieldFirstName.text = user.firstName
+            self.textieldLastName.text = user.lastName
+            self.textFieldCity.text = user.address.city
+            self.textFieldPostalCode.text = String(user.address.postalCode)
+            self.textFieldStreet.text = user.address.street
+            self.textFieldStreetCode.text = user.address.streetCode
+            self.textFieldCountry.text = user.address.country
+            self.textFieldBirthDate.text = self.formatDate(timeInterval: user.birthDate)
+        }).disposed(by: disposeBag)
+        
+        self.buttonSave.rx.tap.subscribe(onNext: { [weak self] _ in
+            self?.viewModel.tapSaveProfile.onNext(())
+        }).disposed(by: disposeBag)
     }
     
-}
-
-extension ProfileViewController: UITableViewDelegate {
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.viewModel.tapDismiss.onNext(())
+    }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+    func formatDate(timeInterval: TimeInterval) -> String {
+        let date = Date(timeIntervalSince1970: timeInterval)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
+        return formatter.string(from: date)
     }
     
 }

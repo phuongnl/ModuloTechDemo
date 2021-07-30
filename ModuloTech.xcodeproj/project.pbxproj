@@ -58,6 +58,10 @@
 		7F7731FF26B4171400EC9358 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7731FD26B4171400EC9358 /* ProfileCell.swift */; };
 		7F77320026B4171400EC9358 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7731FE26B4171400EC9358 /* ProfileCell.xib */; };
 		7F77320326B420DB00EC9358 /* TPKeyboardAvoiding in Frameworks */ = {isa = PBXBuildFile; productRef = 7F77320226B420DB00EC9358 /* TPKeyboardAvoiding */; };
+		7F8552C126B456BB00105C48 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8552C026B456BB00105C48 /* UserDataManager.swift */; };
+		7F8552C326B456F300105C48 /* Data+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8552C226B456F300105C48 /* Data+Json.swift */; };
+		7F8552C526B4570400105C48 /* Encodable+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8552C426B4570400105C48 /* Encodable+Json.swift */; };
+		7F8552C726B4575C00105C48 /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8552C626B4575C00105C48 /* Json.swift */; };
 		7FC70CE426B10D0D00F6A44C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC70CE326B10D0D00F6A44C /* Logger.swift */; };
 		7FC70CE726B112B400F6A44C /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC70CE626B112B400F6A44C /* BaseCoordinator.swift */; };
 		7FC70CEA26B1156300F6A44C /* Container+RegisterDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC70CE926B1156300F6A44C /* Container+RegisterDependencies.swift */; };
@@ -154,6 +158,10 @@
 		7F7731FB26B4118200EC9358 /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
 		7F7731FD26B4171400EC9358 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		7F7731FE26B4171400EC9358 /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		7F8552C026B456BB00105C48 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
+		7F8552C226B456F300105C48 /* Data+Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Json.swift"; sourceTree = "<group>"; };
+		7F8552C426B4570400105C48 /* Encodable+Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodable+Json.swift"; sourceTree = "<group>"; };
+		7F8552C626B4575C00105C48 /* Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
 		7FC70CE326B10D0D00F6A44C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		7FC70CE626B112B400F6A44C /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		7FC70CE926B1156300F6A44C /* Container+RegisterDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+RegisterDependencies.swift"; sourceTree = "<group>"; };
@@ -301,6 +309,8 @@
 				7F075FDF26AFF57900768CAC /* TableViewExt.swift */,
 				7F075FE126AFF58600768CAC /* ViewExt.swift */,
 				7F7731FB26B4118200EC9358 /* UIColorExt.swift */,
+				7F8552C226B456F300105C48 /* Data+Json.swift */,
+				7F8552C426B4570400105C48 /* Encodable+Json.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -310,6 +320,7 @@
 			children = (
 				7FC70CE326B10D0D00F6A44C /* Logger.swift */,
 				7FCBA37F26B1423A00C547C7 /* DeviceType.swift */,
+				7F8552C626B4575C00105C48 /* Json.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -343,6 +354,7 @@
 		7F075F9D26AFE91A00768CAC /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				7F8552C026B456BB00105C48 /* UserDataManager.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -667,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F075FFF26B01BE500768CAC /* LightViewModel.swift in Sources */,
+				7F8552C526B4570400105C48 /* Encodable+Json.swift in Sources */,
 				7F7731FA26B40F5200EC9358 /* CustomSlider.swift in Sources */,
 				7FC70CF226B1166800F6A44C /* AppCoordinator.swift in Sources */,
 				7F07600826B01C1700768CAC /* RollerShutterViewController.swift in Sources */,
@@ -679,6 +692,7 @@
 				7F7731FF26B4171400EC9358 /* ProfileCell.swift in Sources */,
 				7F07601D26B01CD400768CAC /* ProfileCoordinator.swift in Sources */,
 				7F075F5A26AFE4D600768CAC /* AppDelegate.swift in Sources */,
+				7F8552C726B4575C00105C48 /* Json.swift in Sources */,
 				7F075FEC26AFFACA00768CAC /* RollerShutter.swift in Sources */,
 				7F7731FC26B4118200EC9358 /* UIColorExt.swift in Sources */,
 				7FC70CE726B112B400F6A44C /* BaseCoordinator.swift in Sources */,
@@ -694,10 +708,12 @@
 				7F7731F826B3F25A00EC9358 /* DeviceMode.swift in Sources */,
 				7FCBA38226B1674600C547C7 /* DeviceProtocol.swift in Sources */,
 				7F075FEA26AFF86200768CAC /* ViewControllerExt.swift in Sources */,
+				7F8552C326B456F300105C48 /* Data+Json.swift in Sources */,
 				7F075FD426AFF47D00768CAC /* HomeViewModel.swift in Sources */,
 				7F07600B26B01C2300768CAC /* RollerShutterViewModel.swift in Sources */,
 				7F075FD626AFF49400768CAC /* HomeCoordinator.swift in Sources */,
 				7F075FD126AFF43000768CAC /* HomeViewController.swift in Sources */,
+				7F8552C126B456BB00105C48 /* UserDataManager.swift in Sources */,
 				7FC70CEC26B1158100F6A44C /* Container+ViewModels.swift in Sources */,
 				7F075FA626AFE91B00768CAC /* User.swift in Sources */,
 				7F075FE226AFF58700768CAC /* ViewExt.swift in Sources */,

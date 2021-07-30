@@ -8,15 +8,19 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class ProfileViewModel: NSObject {
 
     private let disposeBag = DisposeBag()
 
     let title = L10n.profile
-
-    let user: PublishSubject<User> = PublishSubject()
-
-    let devices = BehaviorSubject(value: [Any]())
-
+    let user = BehaviorRelay<User?>(value: nil)
+    let tapSaveProfile = PublishSubject<Void>()
+    let tapDismiss = PublishSubject<Void>()
+    
+    init(user: User) {
+        self.user.accept(user)
+    }
+    
 }
