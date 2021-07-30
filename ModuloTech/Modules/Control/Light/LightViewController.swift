@@ -14,8 +14,9 @@ class LightViewController: UIViewController {
     
     var viewModel: LightViewModel!
     private let disposeBag = DisposeBag()
+    private let kStepSlider: Float = 10
     
-    @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var slider: CustomSlider!
     @IBOutlet weak var switchLight: UISwitch!
     @IBOutlet weak var labelValue: UILabel!
     
@@ -40,9 +41,23 @@ class LightViewController: UIViewController {
             .disposed(by: disposeBag)
         
         self.slider.rx.value
-            .subscribe(onNext: { value in
-                self.labelValue.text = String(format: "%0.f", value)
-            }).disposed(by: disposeBag)
+            .map {[weak self] value -> Float in
+                guard let self = self else { return value }
+                let numberSteps = roundf(value/self.kStepSlider)
+                let newValue = numberSteps * self.kStepSlider
+                if newValue < self.slider.minimumValue {
+                    return self.slider.minimumValue
+                } else if newValue > self.slider.maximumValue {
+                    return self.slider.maximumValue
+                }
+                return newValue
+        }.subscribe(onNext: { [weak self] value in
+            guard let self = self else { return }
+            self.slider.value = value
+            self.labelValue.text = String(format: "%0.f", value)
+        }).disposed(by: disposeBag)
+        
+        self.slider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
     }
     
 }

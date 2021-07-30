@@ -53,6 +53,11 @@
 		7F07602626B01FA300768CAC /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 7F07602526B01FA300768CAC /* SwinjectAutoregistration */; };
 		7F07602826B01FD700768CAC /* ModuloRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F07602726B01FD700768CAC /* ModuloRemoteDataSource.swift */; };
 		7F7731F826B3F25A00EC9358 /* DeviceMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7731F726B3F25A00EC9358 /* DeviceMode.swift */; };
+		7F7731FA26B40F5200EC9358 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7731F926B40F5200EC9358 /* CustomSlider.swift */; };
+		7F7731FC26B4118200EC9358 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7731FB26B4118200EC9358 /* UIColorExt.swift */; };
+		7F7731FF26B4171400EC9358 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7731FD26B4171400EC9358 /* ProfileCell.swift */; };
+		7F77320026B4171400EC9358 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7731FE26B4171400EC9358 /* ProfileCell.xib */; };
+		7F77320326B420DB00EC9358 /* TPKeyboardAvoiding in Frameworks */ = {isa = PBXBuildFile; productRef = 7F77320226B420DB00EC9358 /* TPKeyboardAvoiding */; };
 		7FC70CE426B10D0D00F6A44C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC70CE326B10D0D00F6A44C /* Logger.swift */; };
 		7FC70CE726B112B400F6A44C /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC70CE626B112B400F6A44C /* BaseCoordinator.swift */; };
 		7FC70CEA26B1156300F6A44C /* Container+RegisterDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC70CE926B1156300F6A44C /* Container+RegisterDependencies.swift */; };
@@ -145,6 +150,10 @@
 		7F07601C26B01CD400768CAC /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		7F07602726B01FD700768CAC /* ModuloRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuloRemoteDataSource.swift; sourceTree = "<group>"; };
 		7F7731F726B3F25A00EC9358 /* DeviceMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMode.swift; sourceTree = "<group>"; };
+		7F7731F926B40F5200EC9358 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		7F7731FB26B4118200EC9358 /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
+		7F7731FD26B4171400EC9358 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		7F7731FE26B4171400EC9358 /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		7FC70CE326B10D0D00F6A44C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		7FC70CE626B112B400F6A44C /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		7FC70CE926B1156300F6A44C /* Container+RegisterDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+RegisterDependencies.swift"; sourceTree = "<group>"; };
@@ -161,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F77320326B420DB00EC9358 /* TPKeyboardAvoiding in Frameworks */,
 				7F07602626B01FA300768CAC /* SwinjectAutoregistration in Frameworks */,
 				7F075FB826AFEA7900768CAC /* RxCocoa.framework in Frameworks */,
 				7F075F8B26AFE59300768CAC /* SwiftyJSON in Frameworks */,
@@ -279,6 +289,7 @@
 		7F075F9626AFE91800768CAC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				7F7731F926B40F5200EC9358 /* CustomSlider.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -289,6 +300,7 @@
 				7F075FE926AFF86200768CAC /* ViewControllerExt.swift */,
 				7F075FDF26AFF57900768CAC /* TableViewExt.swift */,
 				7F075FE126AFF58600768CAC /* ViewExt.swift */,
+				7F7731FB26B4118200EC9358 /* UIColorExt.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -422,6 +434,8 @@
 				7F07601626B01CBE00768CAC /* ProfileViewController.swift */,
 				7F07601A26B01CCA00768CAC /* ProfileViewModel.swift */,
 				7F07601C26B01CD400768CAC /* ProfileCoordinator.swift */,
+				7F7731FD26B4171400EC9358 /* ProfileCell.swift */,
+				7F7731FE26B4171400EC9358 /* ProfileCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -482,6 +496,7 @@
 				7F075F8D26AFE84E00768CAC /* SwiftyBeaver */,
 				7F07602226B01F7800768CAC /* Swinject */,
 				7F07602526B01FA300768CAC /* SwinjectAutoregistration */,
+				7F77320226B420DB00EC9358 /* TPKeyboardAvoiding */,
 			);
 			productName = ModuloTech;
 			productReference = 7F075F5626AFE4D600768CAC /* ModuloTech.app */;
@@ -560,6 +575,7 @@
 				7F075F8C26AFE84E00768CAC /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 				7F07602126B01F7800768CAC /* XCRemoteSwiftPackageReference "Swinject" */,
 				7F07602426B01FA300768CAC /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+				7F77320126B420DB00EC9358 /* XCRemoteSwiftPackageReference "TPKeyboardAvoiding" */,
 			);
 			productRefGroup = 7F075F5726AFE4D600768CAC /* Products */;
 			projectDirPath = "";
@@ -586,6 +602,7 @@
 				7F07600926B01C1700768CAC /* RollerShutterViewController.xib in Resources */,
 				7F075FD226AFF43000768CAC /* HomeViewController.xib in Resources */,
 				7F075FE626AFF5AC00768CAC /* DeviceCell.xib in Resources */,
+				7F77320026B4171400EC9358 /* ProfileCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,6 +667,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F075FFF26B01BE500768CAC /* LightViewModel.swift in Sources */,
+				7F7731FA26B40F5200EC9358 /* CustomSlider.swift in Sources */,
 				7FC70CF226B1166800F6A44C /* AppCoordinator.swift in Sources */,
 				7F07600826B01C1700768CAC /* RollerShutterViewController.swift in Sources */,
 				7F07601426B01C7E00768CAC /* HeaterViewController.swift in Sources */,
@@ -658,9 +676,11 @@
 				7F075FA926AFE9AF00768CAC /* L10n.swift in Sources */,
 				7F07601B26B01CCA00768CAC /* ProfileViewModel.swift in Sources */,
 				7F07601826B01CBE00768CAC /* ProfileViewController.swift in Sources */,
+				7F7731FF26B4171400EC9358 /* ProfileCell.swift in Sources */,
 				7F07601D26B01CD400768CAC /* ProfileCoordinator.swift in Sources */,
 				7F075F5A26AFE4D600768CAC /* AppDelegate.swift in Sources */,
 				7F075FEC26AFFACA00768CAC /* RollerShutter.swift in Sources */,
+				7F7731FC26B4118200EC9358 /* UIColorExt.swift in Sources */,
 				7FC70CE726B112B400F6A44C /* BaseCoordinator.swift in Sources */,
 				7FC70CE426B10D0D00F6A44C /* Logger.swift in Sources */,
 				7FC70CEA26B1156300F6A44C /* Container+RegisterDependencies.swift in Sources */,
@@ -1047,6 +1067,14 @@
 				minimumVersion = 2.7.0;
 			};
 		};
+		7F77320126B420DB00EC9358 /* XCRemoteSwiftPackageReference "TPKeyboardAvoiding" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/michaeltyson/TPKeyboardAvoiding";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1069,6 +1097,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7F07602426B01FA300768CAC /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
 			productName = SwinjectAutoregistration;
+		};
+		7F77320226B420DB00EC9358 /* TPKeyboardAvoiding */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F77320126B420DB00EC9358 /* XCRemoteSwiftPackageReference "TPKeyboardAvoiding" */;
+			productName = TPKeyboardAvoiding;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

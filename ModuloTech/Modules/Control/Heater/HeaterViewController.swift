@@ -42,11 +42,10 @@ class HeaterViewController: UIViewController {
                     return self.slider.maximumValue
                 }
                 return newValue
-        }
-        .subscribe(onNext: { [weak self] value in
+        }.subscribe(onNext: { [weak self] value in
             guard let self = self else { return }
-            self.labelValue.text = String(format: "%0.f", value)
             self.slider.value = value
+            self.labelValue.text = String(format: "%0.f", value)
         }).disposed(by: disposeBag)
     }
     

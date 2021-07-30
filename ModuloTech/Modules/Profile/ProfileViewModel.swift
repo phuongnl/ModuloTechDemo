@@ -7,7 +7,16 @@
 //
 
 import UIKit
+import RxSwift
 
 class ProfileViewModel: NSObject {
+
+    private let disposeBag = DisposeBag()
+
+    let title = L10n.profile
+
+    let user: PublishSubject<User> = PublishSubject()
+
+    let devices = BehaviorSubject(value: [Any]())
 
 }
