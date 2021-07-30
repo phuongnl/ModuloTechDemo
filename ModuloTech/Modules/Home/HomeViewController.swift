@@ -117,3 +117,11 @@ extension HomeViewController: UITableViewDelegate {
     }
     
 }
+
+extension HomeViewController: UIScrollViewDelegate {
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        self.searchBar.resignFirstResponder()
+    }
+    
+}
